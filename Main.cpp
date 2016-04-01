@@ -3,7 +3,6 @@
 #include "UnitHelper.h"
 #include "VehicleCounter.h"
 #include "ScriptGlobal.h"
-#include "Briefing.h"
 #include "HFL\Source\HFL.h"
 #include "OP2Helper\OP2Helper.h"
 #include "Outpost2DLL\Outpost2DLL.h"
@@ -16,6 +15,7 @@ extern SongIds PlayList[];
 extern void InitializeStartingUnits(UnitHelper::VehicleBuilder &vehicleBuilder);
 extern void InitializeRogueStartingUnits(UnitHelper::VehicleBuilder &vehicleBuilder);
 extern void InitializeVictoryConditions();
+extern void ShowBriefing();
 ScriptGlobal scriptGlobal;
 
 UnitHelper::VehicleBuilder vehicleBuilder;
