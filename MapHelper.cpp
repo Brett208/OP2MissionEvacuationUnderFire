@@ -16,25 +16,28 @@ namespace MapHelper
 		}
 	}
 
-	void SetLavaPossibleAllSlowCells(MAP_RECT mapRect)
+	void SetLavaPossibleAllSlowCells(const MAP_RECT &mapRect)
 	{
-		int x, y, tile;
+		int cellType;
+		LOCATION location;
 
-		for (y = mapRect.y1; y < mapRect.y2; ++y)
+		for (int y = mapRect.y1; y <= mapRect.y2; ++y)
 		{
-			for (x = mapRect.x1; x < mapRect.x2; ++x)
+			for (int x = mapRect.x1; x <= mapRect.x2; ++x)
 			{
-				tile = GameMap::GetCellType(LOCATION(x, y));
-				if ((tile == CellTypes::cellSlowPassible1) ||
-					(tile == CellTypes::cellSlowPassible2))
+				location = LOCATION(x, y);
+				cellType = GameMap::GetCellType(location);
+
+				if (cellType == CellTypes::cellSlowPassible1 ||
+					cellType == CellTypes::cellSlowPassible2)
 				{
-					GameMap::SetLavaPossible(LOCATION(x, y), true);
+					GameMap::SetLavaPossible(location, true);
 				}
 			}
 		}
 	}
 
-	void SetSouthEastLavaFlowAni(LOCATION location)
+	void SetSouthEastLavaFlowAni(const LOCATION &location)
 	{
 		GameMap::SetTile(LOCATION(location.x, location.y), 0x489);
 		GameMap::SetTile(LOCATION(location.x, location.y + 1), 0x4A0);
@@ -42,12 +45,12 @@ namespace MapHelper
 		GameMap::SetTile(LOCATION(location.x + 1, location.y), 0x494);
 	}
 
-	void CreateBeaconRandomYield(LOCATION loc, BeaconTypes beaconType)
+	void CreateBeaconRandomYield(const LOCATION &loc, BeaconTypes beaconType)
 	{
 		TethysGame::CreateBeacon(map_id::mapMiningBeacon, loc.x, loc.y, beaconType, Yield::BarRandom, Variant::VariantRandom);
 	}
 
-	LOCATION CreateBeaconInRegion(MAP_RECT rect, BeaconTypes commonRareType, Yield oreBar, Variant barVariant)
+	LOCATION CreateBeaconInRegion(const MAP_RECT &rect, BeaconTypes commonRareType, Yield oreBar, Variant barVariant)
 	{
 		LOCATION loc = rect.RandPt();
 		TethysGame::CreateBeacon(map_id::mapMiningBeacon, loc.x, loc.y, commonRareType, oreBar, barVariant);
@@ -66,7 +69,7 @@ namespace MapHelper
 		return loc;
 	}
 
-	LOCATION CreateMagmaWellInRegion(MAP_RECT mapRect)
+	LOCATION CreateMagmaWellInRegion(const MAP_RECT &mapRect)
 	{
 		LOCATION loc = mapRect.RandPt();
 		TethysGame::CreateBeacon(map_id::mapMagmaVent, loc.x, loc.y, -1, -1, -1);
@@ -74,7 +77,7 @@ namespace MapHelper
 		return loc;
 	}
 
-	void CreateFumaroleInRegion(MAP_RECT mapRect)
+	void CreateFumaroleInRegion(const MAP_RECT &mapRect)
 	{
 		LOCATION fumaroleLoc = mapRect.RandPt();
 		TethysGame::CreateBeacon(map_id::mapFumarole, fumaroleLoc.x, fumaroleLoc.y, -1, -1, -1);
