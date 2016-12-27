@@ -123,7 +123,7 @@ void RubbleMaker::CreateDestroyedBuilding(const LOCATION &loc, int buildingWidth
 	MAP_RECT buildingDozedRect = GetBuildingDozedRect(loc, buildingWidth, buildingHeight);
 	MAP_RECT buildingFootprint = GetBuildingFootprint(buildingDozedRect);
 
-	Bulldozer::Doze(buildingDozedRect);
+	Doze(buildingDozedRect);
 
 	if (includeTubes)
 	{
