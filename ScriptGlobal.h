@@ -37,6 +37,7 @@ struct ScriptGlobal
 	Trigger TrigReleaseRogueFightGroup;
 
 	FightGroup RogueFightGroups[33];
+	// Tracks if a fight group is available to task.
 	bool RogueFightGroupsAvailable[33];
 	int RogueFightGroupsCount = 33;
 

@@ -357,7 +357,7 @@ Export void InitializeRandomDisaster()
 	CreateRandomDisaster(criticalBuildingLocations);
 }
 
-void buildRogueFightGroupPatrol(FightGroup &fightGroup)
+void BuildRogueFightGroupPatrol(FightGroup &fightGroup)
 {
 	LOCATION PatrolPoints[6];
 	MAP_RECT mapRect(X_, Y_, 72 + X_, 128 + Y_);
@@ -394,6 +394,7 @@ void ReviewRogueFightGroupsStatus(std::vector<int> &availableFightGroupIndices)
 {
 	for (int i = 0; i < scriptGlobal.RogueFightGroupsCount; ++i)
 	{
+		// Remove fight group from available list if all of its units were destroyed for any reason.
 		if (scriptGlobal.RogueFightGroups[i].TotalUnitCount() == 0)
 		{
 			scriptGlobal.RogueFightGroupsAvailable[i] = false;
@@ -422,10 +423,11 @@ void SetRogueFightGroupAction(int indexToSend)
 	}
 	else
 	{
-		buildRogueFightGroupPatrol(scriptGlobal.RogueFightGroups[indexToSend]);
+		BuildRogueFightGroupPatrol(scriptGlobal.RogueFightGroups[indexToSend]);
 	}
 }
 
+// Creates a container of available fight groups for tasking and randomly pick one to activate.
 Export void ReleaseRogueFightGroup()
 {
 	std::vector<int> availableFightGroupIndices;
