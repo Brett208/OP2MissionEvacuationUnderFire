@@ -8,7 +8,7 @@
 // Required includes for the mission briefing dialog
 #include <richedit.h>
 #include "resource.h"
-#include "Outpost2Dialog\odasl\odasl.h"
+#include "odasl\odasl.h"
 
 extern HINSTANCE hInst; //HINSTANCE needs to be accessed from the dllMain function.
 LRESULT CALLBACK DialogProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
