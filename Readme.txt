@@ -32,7 +32,7 @@ If you need help troubleshooting the compiled scenario or the source code, use t
 
 ** Bugs
 
- * Currently None...
+ * If you save and then load the mission before emptying vehicles in the garage, sometimes attempting to release a vehicle from the garage will crash the game. Unknown if bug is in mission logic or game logic.
 
 ** Credits
 
