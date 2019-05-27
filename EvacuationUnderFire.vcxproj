@@ -66,12 +66,10 @@
       <AdditionalDependencies>OP2MissionSDK\odasl\odasl.lib;vcruntime.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>rem copy /Y "$(TargetPath)" "..\..\..\..\GameDownload\Outpost2\trunk\$(TargetFilename)"
-rem copy /Y "$(ProjectDir)SandyValley.map" "..\..\..\..\GameDownload\Outpost2\trunk\SandyValley.map"
-rem copy /Y "$(ProjectDir)PursuedTechTree.txt" "..\..\..\..\GameDownload\Outpost2\trunk\PursuedTechTree.txt"</Command>
+      <Command>if defined Outpost2Path (xcopy /y /d "$(TargetPath)" "$(Outpost2Path)\") else (echo Outpost2Path environment variable not defined. Skipping Post Build Copy.)</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>Copy Level DLL, Map File and Tech Tree file to Outpost 2 game directory in SVN. NOTE: Remaked out by default.</Message>
+      <Message>Copy DLL to game folder</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -93,12 +91,10 @@ rem copy /Y "$(ProjectDir)PursuedTechTree.txt" "..\..\..\..\GameDownload\Outpost
       <AdditionalDependencies>OP2MissionSDK\odasl\odasl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>rem copy /Y "$(TargetPath)" "..\..\..\..\GameDownload\Outpost2\trunk\$(TargetFilename)"
-rem copy /Y "$(ProjectDir)SandyValley.map" "..\..\..\..\GameDownload\Outpost2\trunk\SandyValley.map"
-rem copy /Y "$(ProjectDir)PursuedTechTree.txt" "..\..\..\..\GameDownload\Outpost2\trunk\PursuedTechTree.txt"</Command>
+      <Command>if defined Outpost2Path (xcopy /y /d "$(TargetPath)" "$(Outpost2Path)\") else (echo Outpost2Path environment variable not defined. Skipping Post Build Copy.)</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>Copy Level DLL, Map File and Tech Tree file to Outpost 2 game directory in SVN. NOTE: Remaked out by default.</Message>
+      <Message>Copy DLL to game folder</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
