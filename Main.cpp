@@ -113,8 +113,6 @@ void SetResearchedTech()
 
 Export int InitProc()
 {
-	HFLInit();
-
 	ShowBriefing();
 
 	TethysGame::SetDaylightEverywhere(true);
