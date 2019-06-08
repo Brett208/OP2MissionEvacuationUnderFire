@@ -1,12 +1,12 @@
 #include "UnitHelper.h"
+#include <stdexcept>
 
 namespace UnitHelper
 {
 	void VehicleBuilder::SetPlayer(int player)
 	{
-		if (playerNumber > 6)
-		{
-			throw "Maximum of 6 players allowed.";
+		if (playerNumber > 6) {
+			throw std::runtime_error("Maximum of 6 players allowed.");
 		}
 
 		playerNumber = player;
