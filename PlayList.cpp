@@ -1,4 +1,4 @@
-#include "Outpost2DLL\Outpost2DLL.h"
+#include "Outpost2DLL/Outpost2DLL.h"
 
 // List of songs to play
 SongIds PlayList[] = {

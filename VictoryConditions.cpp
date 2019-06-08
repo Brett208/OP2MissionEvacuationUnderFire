@@ -1,8 +1,8 @@
 #include "ScriptGlobal.h"
-#include "OP2Helper\OP2Helper.h"
-#include "Outpost2DLL\Outpost2DLL.h"
+#include "OP2Helper/OP2Helper.h"
+#include "Outpost2DLL/Outpost2DLL.h"
 
-MAP_RECT evacuateArea(LOCATION(1 + X_, 1 + Y_), LOCATION(25 + X_, 25 + Y_));
+const MAP_RECT evacuateArea(LOCATION(1 + X_, 1 + Y_), LOCATION(25 + X_, 25 + Y_));
 
 void CreateCountVictoryTrigger(Trigger& trigger, map_id unit, map_id cargo, int minCount, char* missionObjective)
 {

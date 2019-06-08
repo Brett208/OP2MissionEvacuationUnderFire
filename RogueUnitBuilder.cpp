@@ -1,6 +1,6 @@
 #include "UnitHelper.h"
 #include "ScriptGlobal.h"
-#include "Outpost2DLL\Outpost2DLL.h"
+#include "Outpost2DLL/Outpost2DLL.h"
 #include <vector>
 
 void CreateRandomCombatVehicle(Unit &unit, const LOCATION &loc, UnitHelper::VehicleBuilder &vehicleBuilder)

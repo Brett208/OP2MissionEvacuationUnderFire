@@ -2,13 +2,11 @@
    A resource script and resource.h are required that define the parameters of the modal dialog
    and add the briefing text as a resource to the DLL scenario.*/
 
-#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
-#include <windows.h>
-
-// Required includes for the mission briefing dialog
-#include <richedit.h>
 #include "resource.h"
-#include "odasl\odasl.h"
+#include "odasl/odasl.h"
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <richedit.h>
 
 extern HINSTANCE hInst; //HINSTANCE needs to be accessed from the dllMain function.
 LRESULT CALLBACK DialogProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -66,4 +64,3 @@ LRESULT CALLBACK DialogProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	}
 	return FALSE;
 }
-

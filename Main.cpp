@@ -3,9 +3,9 @@
 #include "UnitHelper.h"
 #include "VehicleCounter.h"
 #include "ScriptGlobal.h"
-#include "HFL\Source\HFL.h"
-#include "OP2Helper\OP2Helper.h"
-#include "Outpost2DLL\Outpost2DLL.h"
+#include "HFL/Source/HFL.h"
+#include "OP2Helper/OP2Helper.h"
+#include "Outpost2DLL/Outpost2DLL.h"
 #include <vector>
 
 // Required data exports  (Description, Map, TechTree, GameType, NumPlayers)

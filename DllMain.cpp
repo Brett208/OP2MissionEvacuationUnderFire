@@ -1,6 +1,6 @@
+#include "HFL/Source/HFL.h"
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
-#include <HFL/Source/HFL.h>
 
 // Used by the scenario briefing screen.
 HINSTANCE hInst;

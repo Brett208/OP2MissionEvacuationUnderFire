@@ -1,7 +1,7 @@
 #pragma once
 
-#include "OP2Helper\ColonyType.h"
-#include "Outpost2DLL\Outpost2DLL.h"
+#include "OP2Helper/ColonyType.h"
+#include "Outpost2DLL/Outpost2DLL.h"
 #include <vector>
 
 

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "OP2Helper\Bulldozer.h"
-#include "HFL\Source\HFL.h"
-#include "Outpost2DLL\Outpost2DLL.h"
+#include "OP2Helper/Bulldozer.h"
+#include "HFL/Source/HFL.h"
+#include "Outpost2DLL/Outpost2DLL.h"
 #include <vector>
  
 class TileGroup;
@@ -98,7 +98,7 @@ public:
 		return range;
 	};
 
-// Returns a TileID based on the combined range of all member TileGroups.
+	// Returns a TileID based on the combined range of all member TileGroups.
 	int GetTile(int range)
 	{
 		int tileID = 0;
