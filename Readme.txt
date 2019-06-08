@@ -1,6 +1,7 @@
 *** Plymouth Campaign Pursued - Scenario 1: Evacuation Under Fire
 
-A custom Plymouth Base Evacuation campaign mission for Outpost 2 programmed by Vagabond in Mar of 2016. 
+A custom Plymouth Base Evacuation campaign mission for Outpost 2 programmed by Brett208 in March of 2016.
+
 This is the first mission of the Pursued Campaign and can be found in the colony games section of Outpost 2. 
 
 *** Compatibility Notes
