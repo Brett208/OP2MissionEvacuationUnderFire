@@ -37,4 +37,4 @@ If you need help troubleshooting the compiled scenario or the source code, use t
 ** Change Log
 
 Version 1.0.1
- - Move HFLInit from LevelInit to DLLMain, allowing initialization when loading a saved game
+ - Move HFLInit from InitProc to DLLMain, allowing initialization when loading a saved game
