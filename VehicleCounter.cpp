@@ -66,7 +66,7 @@ namespace UnitHelper
 
 	void VehicleCounter::GetVehicleIndices(std::vector<int>& vehicleIndices, map_id vehicleType)
 	{
-		for (size_t i = 0; i < VehicleCountVector.size(); ++i)
+		for (std::size_t i = 0; i < VehicleCountVector.size(); ++i)
 		{
 			if (VehicleCountVector[i].UnitType == vehicleType)
 			{
@@ -78,7 +78,7 @@ namespace UnitHelper
 	/*If Unit and cargo combination do not exist in vector, -1 is returned.*/
 	int VehicleCounter::GetVehicleIndex(map_id vehicleType, map_id cargoType)
 	{
-		for (size_t i = 0; i < VehicleCountVector.size(); ++i)
+		for (std::size_t i = 0; i < VehicleCountVector.size(); ++i)
 		{
 			if (VehicleCountVector[i].UnitType == vehicleType &&
 				VehicleCountVector[i].UnitCargo == cargoType)

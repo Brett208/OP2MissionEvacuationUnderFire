@@ -225,7 +225,7 @@ public:
 	void CreateBlastedTiles(const MAP_RECT &mapRect, int count);
 
 	//Attempts to place blasted tiles at each location.
-	template<typename LOCATION, size_t N>
+	template<typename LOCATION, std::size_t N>
 	void CreateBlastedTiles(const std::array<LOCATION, N> &locs)
 	{
 		for (const LOCATION &loc : locs)

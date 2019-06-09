@@ -38,7 +38,7 @@ void CreateMeteor(const std::vector<LOCATION> &criticalBuildingLocations)
 		}
 
 		//Loops through areas around critical structures. If large meteor is going to hit one, tries a different point.
-		for (size_t i = 0; i < criticalBuildingLocations.size(); ++i)
+		for (std::size_t i = 0; i < criticalBuildingLocations.size(); ++i)
 		{
 			if (DistanceBetweenPoints(criticalBuildingLocations[i], disasterLoc) < 5)
 			{
